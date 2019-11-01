@@ -4,70 +4,83 @@ namespace app\admin\controller;
 
 use think\Controller;
 use think\facade\Request;
-use app\admin\facade\Page as PageFacade;
-use app\admin\service\Page as PageService;
 
 class Page extends Controller
 {
-    // private $page;
-
-    // /**
-    //  * Page constructor.
-    //  * @param App|null $app
-    //  * @param PageService $page
-    //  */
-    // public function __construct(App $app = null, PageService $page = null)
-    // {
-    //     parent::__construct($app);
-    //     $this->page = $page;
-    // }
-
-    /**
-     * 列表页
-     *
-     * @return \think\Response
-     */
-    public function index()
-    {
-        return view();
-    }
-    /**
-     * 数据添加
-     *
-     * @return \think\Response
-     */
-    public function welcome1()
-    {
-        if (Request::isGet()) {
-            return view();
-        }
-        return json(PageFacade::add());
-    }
-
-    /**
-     * 编辑
-     *
-     * @param  int  $id
-     * @return \think\Response
-     */
-    public function edit($id)
-    {
-        if (Request::isGet()) {
-            //$this->assign('data', ArticleFacade::getDataById());
-            //$this->assign('type', ArticleTypeFacade::getAll());
-            return view();
-        }
-        return json(PageFacade::editData());
-    }
-
-    /**
-     * 删除
-     *
-     * @param  int  $id
-     * @return \think\Response
-     */
-    public function delete($id)
-    {
-        return json(PageFacade::deleteData());
-    }
+   public function index()
+   {
+      return view();
+   }
+   public function colorselect()
+   {
+      return view();
+   }
+   public function editor()
+   {
+      return view();
+   }
+   public function form()
+   {
+      return view();
+   }
+   public function formstep()
+   {
+      return view();
+   }
+   public function icon()
+   {
+      return view();
+   }
+   public function iconpicker()
+   {
+      return view();
+   }
+   public function layer()
+   {
+      return view();
+   }
+   public function login1()
+   {
+      return view();
+   }
+   public function login2()
+   {
+      return view();
+   }
+   public function menu()
+   {
+      return view();
+   }
+   public function setting()
+   {
+      return view();
+   }
+   public function table()
+   {
+      return view();
+   }
+   public function tableselect()
+   {
+      return view();
+   }
+   public function upload()
+   {
+      return view();
+   }
+   public function userpassword()
+   {
+      return view();
+   }
+   public function usersetting()
+   {
+      return view();
+   }
+   public function welcome1()
+   {
+      return view();
+   }
+   public function welcome2()
+   {
+      return view();
+   }
 }

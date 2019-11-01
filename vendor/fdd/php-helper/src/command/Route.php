@@ -7,13 +7,13 @@ use think\console\input\Argument;
 use think\console\Output;
 use Kuiba\kuibaAdmin\facade\Tool;
 
-class Page extends \think\console\Command
+class Route extends \think\console\Command
 {
 
-    protected $type = 'controller';
+    protected $type = 'route';
     protected function configure()
     {
-        $this->setName('add:page')
+        $this->setName('add:route')
             ->addArgument('name', Argument::OPTIONAL, "your name")
             // ->addOption('city', null, Option::VALUE_REQUIRED, 'city name')
             ->setDescription('make:life');
@@ -22,11 +22,11 @@ class Page extends \think\console\Command
     protected function execute(Input $input, Output $output)
     {
         $name = trim($input->getArgument('name'));
-        $className = Tool::getClassName($name, $this->type);
-        //控制器路径
-        $Path = Tool::getPathName($className);
+        empty($name) && $name = 'admin';
+        $name = strtolower($name);
+        $Path = file_build_path(env('app_path'), '..', $this->type, $name . '.php');
 
-        // 创建controller
+        //创建
         if (is_file($Path)) {
             $output->writeln($Path . ' already exists!');
         } else {
@@ -35,13 +35,13 @@ class Page extends \think\console\Command
             }
             $pageFilePath = file_build_path(__DIR__, '..', '..', 'resources', 'html', 'page');
             $dirToArray = dirToArray($pageFilePath);
-            $page = $this->build($className);
+            $page = $this->build($name);
             foreach ($dirToArray as $key => $value) {
                 $newValue = str_replace('.html', '', $value);
-                $functionStr = $this->buildFunction($newValue);
-                $page .= $functionStr . PHP_EOL;
+                $routeStr = $this->buildRoute($newValue, $name);
+                $page .= $routeStr . PHP_EOL;
             }
-            $page .= '}';
+            $page .= '});';
             file_put_contents($Path, $page);
             $output->writeln($this->type . ' Creating  successful!');
         }
@@ -49,7 +49,7 @@ class Page extends \think\console\Command
 
     protected function getStub()
     {
-        $stubPath = file_build_path(__DIR__, 'stubs', 'page.stub');
+        $stubPath = file_build_path(__DIR__, 'stubs', 'route.stub');
         return $stubPath;
     }
 
@@ -57,27 +57,21 @@ class Page extends \think\console\Command
     protected function build($name)
     {
         $stub = file_get_contents($this->getStub());
-
-        $namespace = trim(implode('\\', array_slice(explode('\\', $name), 0, -1)), '\\');
-
-        $namespace_new = trim(implode('\\', array_slice(explode('\\', $namespace), 0, 2)), '\\');
-
-        $class = str_replace($namespace . '\\', '', $name);
-
-        $data_field = cc_format($class);
-
-        return str_replace(['{%className%}', '{%namespace%}'], [
-            $class,
-            $namespace,
+        $module = $name;
+        return str_replace(['{%module%}'], [
+            $module,
         ], $stub);
     }
-    protected function buildFunction($name)
+    protected function buildRoute($name, $module)
     {
-        $stubPath = file_build_path(__DIR__, 'stubs', 'function.stub');
+        $stubPath = file_build_path(__DIR__, 'stubs', 'routeitem.stub');
         $stub = file_get_contents($stubPath);
-        $functionName = $name;
-        return str_replace(['{%functionName%}'], [
-            $functionName,
+        $module = $module;
+
+        $item = $name;
+        return str_replace(['{%item%}', '{%module%}'], [
+            $item,
+            $module
         ], $stub);
     }
 }

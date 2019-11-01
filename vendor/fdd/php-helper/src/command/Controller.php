@@ -5,7 +5,8 @@ namespace Kuiba\kuibaAdmin\command;
 use think\console\Input;
 use think\console\input\Argument;
 use think\console\Output;
-use kuiba\kuibaAdmin\Tool;
+// use kuiba\kuibaAdmin\Tool;
+use Kuiba\kuibaAdmin\facade\Tool;
 
 class Controller extends \think\console\Command
 {
@@ -21,11 +22,10 @@ class Controller extends \think\console\Command
 
     protected function execute(Input $input, Output $output)
     {
-        $tool = new Tool;
         $name = trim($input->getArgument('name'));
-        $className = $tool->getClassName($name, $this->type);
+        $className = Tool::getClassName($name, $this->type);
         //控制器路径
-        $Path = $tool->getPathName($className);
+        $Path = Tool::getPathName($className);
 
         // 创建controller
         if (is_file($Path)) {
@@ -35,13 +35,13 @@ class Controller extends \think\console\Command
                 mkdir(dirname($Path), 0755, true);
             }
             file_put_contents($Path, $this->build($className));
-            $output->writeln($this->controller . ' Creating  successful!');
+            $output->writeln($this->type . ' Creating  successful!');
         }
     }
 
     protected function getStub()
     {
-        $stubPath = file_build_path(__DIR__, 'stubs', '' . $this->controller . '.stub');
+        $stubPath = file_build_path(__DIR__, 'stubs', '' . $this->type . '.stub');
         return $stubPath;
     }
 

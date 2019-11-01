@@ -13,6 +13,10 @@
     \Kuiba\kuibaAdmin\command\Controller::class,
     \Kuiba\kuibaAdmin\command\Model::class,
     \Kuiba\kuibaAdmin\command\Service::class,
+    \Kuiba\kuibaAdmin\command\Page::class,
+    \Kuiba\kuibaAdmin\command\Route::class,
+
+
 ]);
 // require_once 'route' . DIRECTORY_SEPARATOR . 'Route.php';
 if (!function_exists('scan_dir')) {
