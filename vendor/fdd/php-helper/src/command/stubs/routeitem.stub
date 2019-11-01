@@ -1,1 +1,1 @@
-    Route::get('page/{%item%}$', '{%module%}/page/{%item%}'); //
+    Route::get('{%item%}$', '{%module%}/page/{%item%}'); //

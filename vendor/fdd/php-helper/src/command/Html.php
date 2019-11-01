@@ -30,8 +30,7 @@ class Html extends \think\console\Command
         // $this->createRoute($output, $moduleName);
         $this->createModule($output, $moduleName);
 
-        // $this->createHtml($output);
-
+        $this->createHtml($output, $moduleName);
     }
     //复制配置文件
     public function createConfig($output)
@@ -67,8 +66,26 @@ class Html extends \think\console\Command
         Tool::handle($output, __FUNCTION__, $filePath, $baseFilePath, true, 'copy_dir');
     }
     //复制html文件
-    public function createHtml($output)
-    { }
+    public function createHtml($output, $moduleName = 'admin')
+    {
+        $filePath = file_build_path(env('app_path'), '..', 'view', $moduleName, 'page', 'index.html');
+
+        if (is_file($filePath)) {
+            $output->writeln($filePath . ' already exists!');
+        } else {
+            $baseFilePath = file_build_path(__DIR__, '..', '..', 'resources', 'html', 'index.html');
+            $baseFilePathStr = file_get_contents($baseFilePath);
+            $newLink = '$1' . '="/static/' . $moduleName . '/$2"' . '$3';
+            $newScript = '$1' . '="/static/' . $moduleName . '/$2"' . '$3';
+            $newJson = "'/static/$moduleName/api/init.json'";
+            // . '/static/' . $moduleName . '/api/init.json'
+            $indexStr = preg_replace('/(<link.+?href)="(.*?[css])"/', $newLink, $baseFilePathStr);
+            $indexStr = preg_replace('/(<script.+?src)="(.*?)"/', $newScript, $indexStr);
+            $indexStr = preg_replace('/(\'api\/init.json\')/', $newJson, $indexStr);
+            file_put_contents($filePath, $indexStr);
+            $output->writeln('index Creating  successful!');
+        }
+    }
     //复制公共model文件
     public function createCommonModel($output)
     {
