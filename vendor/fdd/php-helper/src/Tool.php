@@ -130,4 +130,12 @@ class Tool
     {
         return $module ? ($appNamespace . '\\' . $module) : $appNamespace;
     }
+    public function getEnv($key, $default = null)
+    {
+        $value = getenv($key);
+        if (is_null($default)) {
+            return $value;
+        }
+        return false === $value ? $default : $value;
+    }
 }

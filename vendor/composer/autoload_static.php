@@ -104,17 +104,25 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Contracts\\Service\\' => 26,
+            'Symfony\\Contracts\\Cache\\' => 24,
+            'Symfony\\Component\\VarExporter\\' => 30,
             'Symfony\\Component\\PropertyAccess\\' => 33,
             'Symfony\\Component\\OptionsResolver\\' => 34,
             'Symfony\\Component\\Mime\\' => 23,
             'Symfony\\Component\\Inflector\\' => 28,
             'Symfony\\Component\\HttpFoundation\\' => 33,
+            'Symfony\\Component\\ExpressionLanguage\\' => 37,
+            'Symfony\\Component\\Cache\\' => 24,
             'Stringy\\' => 8,
         ),
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
+            'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+            'Psr\\Container\\' => 14,
+            'Psr\\Cache\\' => 10,
             'PhpOffice\\PhpSpreadsheet\\' => 25,
         ),
         'M' => 
@@ -142,6 +150,10 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
         array (
             'JmesPath\\' => 9,
         ),
+        'I' => 
+        array (
+            'IPTools\\' => 8,
+        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -154,11 +166,16 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
         ),
         'D' => 
         array (
+            'Doctrine\\DBAL\\' => 14,
+            'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Common\\' => 16,
             'DASPRiD\\Enum\\' => 13,
         ),
         'C' => 
         array (
             'Complex\\' => 8,
+            'Casbin\\' => 7,
+            'CasbinAdapter\\DBAL\\' => 19,
         ),
         'B' => 
         array (
@@ -204,6 +221,18 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
+        'Symfony\\Contracts\\Service\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/service-contracts',
+        ),
+        'Symfony\\Contracts\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/cache-contracts',
+        ),
+        'Symfony\\Component\\VarExporter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/var-exporter',
+        ),
         'Symfony\\Component\\PropertyAccess\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/property-access',
@@ -224,6 +253,14 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
         ),
+        'Symfony\\Component\\ExpressionLanguage\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/expression-language',
+        ),
+        'Symfony\\Component\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/cache',
+        ),
         'Stringy\\' => 
         array (
             0 => __DIR__ . '/..' . '/danielstjules/stringy/src',
@@ -232,9 +269,21 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Psr\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/cache/src',
         ),
         'PhpOffice\\PhpSpreadsheet\\' => 
         array (
@@ -304,6 +353,10 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
         array (
             0 => __DIR__ . '/..' . '/mtdowling/jmespath.php/src',
         ),
+        'IPTools\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/s1lentium/iptools/src',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -320,6 +373,18 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
         array (
             0 => __DIR__ . '/..' . '/endroid/qr-code/src',
         ),
+        'Doctrine\\DBAL\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL',
+        ),
+        'Doctrine\\Common\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
+        ),
+        'Doctrine\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
+        ),
         'DASPRiD\\Enum\\' => 
         array (
             0 => __DIR__ . '/..' . '/dasprid/enum/src',
@@ -327,6 +392,14 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
         'Complex\\' => 
         array (
             0 => __DIR__ . '/..' . '/markbaker/complex/classes/src',
+        ),
+        'Casbin\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/casbin/casbin/src',
+        ),
+        'CasbinAdapter\\DBAL\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/casbin/dbal-adapter/src',
         ),
         'BaconQrCode\\' => 
         array (

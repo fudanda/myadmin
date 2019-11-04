@@ -18,7 +18,9 @@
     "require": {
         "php": ">=5.6.0",
         "topthink/framework": "5.1.*",
-        "fdd/php-helper": "^0.37.0"
+        "fdd/php-helper": "^0.37.0",
+        "casbin/casbin": "^2.1",
+        "casbin/dbal-adapter": "^1.1"
     },
     "autoload": {
         "psr-4": {

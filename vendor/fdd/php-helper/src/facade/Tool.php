@@ -1,13 +1,13 @@
 <?php
 
-namespace Kuiba\kuibaAdmin\facade;
+namespace Kuiba\kuibaAdmin\Facade;
 
-use think\Facade;
+use Kuiba\kuibaAdmin\Facade;
 
 class Tool extends Facade
 {
-    protected static function getFacadeClass()
+    protected static function getFacadeAccessor()
     {
-        return 'Kuiba\kuibaAdmin\Tool';
+        return \Kuiba\kuibaAdmin\Tool::class;
     }
 }

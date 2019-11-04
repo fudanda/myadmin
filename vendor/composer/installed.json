@@ -203,6 +203,123 @@
         "homepage": "https://github.com/Bacon/BaconQrCode"
     },
     {
+        "name": "casbin/casbin",
+        "version": "v2.1.0",
+        "version_normalized": "2.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-casbin/php-casbin.git",
+            "reference": "d7abdee9bbe632eaa9b5f29de116184673c27b8a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-casbin/php-casbin/zipball/d7abdee9bbe632eaa9b5f29de116184673c27b8a",
+            "reference": "d7abdee9bbe632eaa9b5f29de116184673c27b8a",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": ">=7.1.0",
+            "s1lentium/iptools": "^1.1",
+            "symfony/expression-language": "^3.4|^4.0"
+        },
+        "require-dev": {
+            "php-coveralls/php-coveralls": "^2.1",
+            "phpunit/phpunit": "~7.0|~8.0"
+        },
+        "time": "2019-10-21T07:45:34+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Casbin\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "TechLee",
+                "email": "techlee@qq.com"
+            }
+        ],
+        "description": "a powerful and efficient open-source access control library for php projects.",
+        "keywords": [
+            "abac",
+            "access control",
+            "acl",
+            "authorization",
+            "casbin",
+            "permission",
+            "rbac"
+        ]
+    },
+    {
+        "name": "casbin/dbal-adapter",
+        "version": "v1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-casbin/dbal-adapter.git",
+            "reference": "9fb40f69797bf38226c29e60b6a1f311c8ee7e8f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-casbin/dbal-adapter/zipball/9fb40f69797bf38226c29e60b6a1f311c8ee7e8f",
+            "reference": "9fb40f69797bf38226c29e60b6a1f311c8ee7e8f",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "casbin/casbin": "^2.0",
+            "doctrine/dbal": "^2.6"
+        },
+        "require-dev": {
+            "php-coveralls/php-coveralls": "^2.1",
+            "phpunit/phpunit": "~7.0"
+        },
+        "time": "2019-10-13T07:48:58+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "CasbinAdapter\\DBAL\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "TechLee",
+                "email": "techlee@qq.com"
+            }
+        ],
+        "description": "Database Abstraction Layer adapter for php-casbin. ",
+        "keywords": [
+            "acl",
+            "adapter",
+            "casbin",
+            "database",
+            "dbal",
+            "permission",
+            "rbac"
+        ]
+    },
+    {
         "name": "clagiordano/weblibs-configmanager",
         "version": "v1.0.7",
         "version_normalized": "1.0.7.0",
@@ -370,6 +487,271 @@
         "keywords": [
             "enum",
             "map"
+        ]
+    },
+    {
+        "name": "doctrine/cache",
+        "version": "v1.8.1",
+        "version_normalized": "1.8.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/doctrine/cache.git",
+            "reference": "d4374ae95b36062d02ef310100ed33d78738d76c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/doctrine/cache/zipball/d4374ae95b36062d02ef310100ed33d78738d76c",
+            "reference": "d4374ae95b36062d02ef310100ed33d78738d76c",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": "~7.1"
+        },
+        "conflict": {
+            "doctrine/common": ">2.2,<2.4"
+        },
+        "require-dev": {
+            "alcaeus/mongo-php-adapter": "^1.1",
+            "doctrine/coding-standard": "^4.0",
+            "mongodb/mongodb": "^1.1",
+            "phpunit/phpunit": "^7.0",
+            "predis/predis": "~1.0"
+        },
+        "suggest": {
+            "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
+        },
+        "time": "2019-10-28T09:31:32+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.8.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Guilherme Blanco",
+                "email": "guilhermeblanco@gmail.com"
+            },
+            {
+                "name": "Roman Borschel",
+                "email": "roman@code-factory.org"
+            },
+            {
+                "name": "Benjamin Eberlei",
+                "email": "kontakt@beberlei.de"
+            },
+            {
+                "name": "Jonathan Wage",
+                "email": "jonwage@gmail.com"
+            },
+            {
+                "name": "Johannes Schmitt",
+                "email": "schmittjoh@gmail.com"
+            }
+        ],
+        "description": "Caching library offering an object-oriented API for many cache backends",
+        "homepage": "https://www.doctrine-project.org",
+        "keywords": [
+            "cache",
+            "caching"
+        ]
+    },
+    {
+        "name": "doctrine/dbal",
+        "version": "v2.10.0",
+        "version_normalized": "2.10.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/doctrine/dbal.git",
+            "reference": "0c9a646775ef549eb0a213a4f9bd4381d9b4d934"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/doctrine/dbal/zipball/0c9a646775ef549eb0a213a4f9bd4381d9b4d934",
+            "reference": "0c9a646775ef549eb0a213a4f9bd4381d9b4d934",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "doctrine/cache": "^1.0",
+            "doctrine/event-manager": "^1.0",
+            "ext-pdo": "*",
+            "php": "^7.2"
+        },
+        "require-dev": {
+            "doctrine/coding-standard": "^6.0",
+            "jetbrains/phpstorm-stubs": "^2019.1",
+            "phpstan/phpstan": "^0.11.3",
+            "phpunit/phpunit": "^8.4.1",
+            "symfony/console": "^2.0.5|^3.0|^4.0|^5.0"
+        },
+        "suggest": {
+            "symfony/console": "For helpful console commands such as SQL execution and import of files."
+        },
+        "time": "2019-11-03T16:50:43+00:00",
+        "bin": [
+            "bin/doctrine-dbal"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.10.x-dev",
+                "dev-develop": "3.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Doctrine\\DBAL\\": "lib/Doctrine/DBAL"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Guilherme Blanco",
+                "email": "guilhermeblanco@gmail.com"
+            },
+            {
+                "name": "Roman Borschel",
+                "email": "roman@code-factory.org"
+            },
+            {
+                "name": "Benjamin Eberlei",
+                "email": "kontakt@beberlei.de"
+            },
+            {
+                "name": "Jonathan Wage",
+                "email": "jonwage@gmail.com"
+            }
+        ],
+        "description": "Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection and management.",
+        "homepage": "https://www.doctrine-project.org/projects/dbal.html",
+        "keywords": [
+            "abstraction",
+            "database",
+            "db2",
+            "dbal",
+            "mariadb",
+            "mssql",
+            "mysql",
+            "oci8",
+            "oracle",
+            "pdo",
+            "pgsql",
+            "postgresql",
+            "queryobject",
+            "sasql",
+            "sql",
+            "sqlanywhere",
+            "sqlite",
+            "sqlserver",
+            "sqlsrv"
+        ]
+    },
+    {
+        "name": "doctrine/event-manager",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/doctrine/event-manager.git",
+            "reference": "a520bc093a0170feeb6b14e9d83f3a14452e64b3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/doctrine/event-manager/zipball/a520bc093a0170feeb6b14e9d83f3a14452e64b3",
+            "reference": "a520bc093a0170feeb6b14e9d83f3a14452e64b3",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": "^7.1"
+        },
+        "conflict": {
+            "doctrine/common": "<2.9@dev"
+        },
+        "require-dev": {
+            "doctrine/coding-standard": "^4.0",
+            "phpunit/phpunit": "^7.0"
+        },
+        "time": "2018-06-11T11:59:03+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Doctrine\\Common\\": "lib/Doctrine/Common"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Roman Borschel",
+                "email": "roman@code-factory.org"
+            },
+            {
+                "name": "Benjamin Eberlei",
+                "email": "kontakt@beberlei.de"
+            },
+            {
+                "name": "Guilherme Blanco",
+                "email": "guilhermeblanco@gmail.com"
+            },
+            {
+                "name": "Jonathan Wage",
+                "email": "jonwage@gmail.com"
+            },
+            {
+                "name": "Johannes Schmitt",
+                "email": "schmittjoh@gmail.com"
+            },
+            {
+                "name": "Marco Pivetta",
+                "email": "ocramius@gmail.com"
+            }
+        ],
+        "description": "Doctrine Event Manager component",
+        "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
+        "keywords": [
+            "event",
+            "eventdispatcher",
+            "eventmanager"
         ]
     },
     {
@@ -1170,6 +1552,117 @@
         ]
     },
     {
+        "name": "psr/cache",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/cache.git",
+            "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
+            "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-08-06T20:24:11+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Cache\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for caching libraries",
+        "keywords": [
+            "cache",
+            "psr",
+            "psr-6"
+        ]
+    },
+    {
+        "name": "psr/container",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/container.git",
+            "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+            "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2017-02-14T16:28:37+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Container\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common Container Interface (PHP FIG PSR-11)",
+        "homepage": "https://github.com/php-fig/container",
+        "keywords": [
+            "PSR-11",
+            "container",
+            "container-interface",
+            "container-interop",
+            "psr"
+        ]
+    },
+    {
         "name": "psr/http-message",
         "version": "1.0.1",
         "version_normalized": "1.0.1.0",
@@ -1225,6 +1718,61 @@
             "psr-7",
             "request",
             "response"
+        ]
+    },
+    {
+        "name": "psr/log",
+        "version": "1.1.2",
+        "version_normalized": "1.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/log.git",
+            "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/log/zipball/446d54b4cb6bf489fc9d75f55843658e6f25d801",
+            "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2019-11-01T11:05:21+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Log\\": "Psr/Log/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for logging libraries",
+        "homepage": "https://github.com/php-fig/log",
+        "keywords": [
+            "log",
+            "psr",
+            "psr-3"
         ]
     },
     {
@@ -1330,6 +1878,276 @@
             }
         ],
         "description": "A polyfill for getallheaders."
+    },
+    {
+        "name": "s1lentium/iptools",
+        "version": "v1.1.1",
+        "version_normalized": "1.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/S1lentium/IPTools.git",
+            "reference": "f6f8ab6132ca7443bd7cced1681f5066d725fd5f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/S1lentium/IPTools/zipball/f6f8ab6132ca7443bd7cced1681f5066d725fd5f",
+            "reference": "f6f8ab6132ca7443bd7cced1681f5066d725fd5f",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "ext-bcmath": "*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0",
+            "satooshi/php-coveralls": "~1.0"
+        },
+        "time": "2018-09-19T06:15:53+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "IPTools\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Safarov Alisher",
+                "email": "alisher.safarov@outlook.com",
+                "homepage": "https://github.com/S1lentium"
+            }
+        ],
+        "description": "PHP Library for manipulating network addresses (IPv4 and IPv6)",
+        "keywords": [
+            "IP",
+            "IP-Tools",
+            "cidr",
+            "ipv4",
+            "ipv6",
+            "network",
+            "subnet"
+        ]
+    },
+    {
+        "name": "symfony/cache",
+        "version": "v4.3.6",
+        "version_normalized": "4.3.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/cache.git",
+            "reference": "30a51b2401ee15bfc7ea98bd7af0f9d80e26e649"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/cache/zipball/30a51b2401ee15bfc7ea98bd7af0f9d80e26e649",
+            "reference": "30a51b2401ee15bfc7ea98bd7af0f9d80e26e649",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": "^7.1.3",
+            "psr/cache": "~1.0",
+            "psr/log": "~1.0",
+            "symfony/cache-contracts": "^1.1",
+            "symfony/service-contracts": "^1.1",
+            "symfony/var-exporter": "^4.2"
+        },
+        "conflict": {
+            "doctrine/dbal": "<2.5",
+            "symfony/dependency-injection": "<3.4",
+            "symfony/var-dumper": "<3.4"
+        },
+        "provide": {
+            "psr/cache-implementation": "1.0",
+            "psr/simple-cache-implementation": "1.0",
+            "symfony/cache-implementation": "1.0"
+        },
+        "require-dev": {
+            "cache/integration-tests": "dev-master",
+            "doctrine/cache": "~1.6",
+            "doctrine/dbal": "~2.5",
+            "predis/predis": "~1.1",
+            "psr/simple-cache": "^1.0",
+            "symfony/config": "~4.2",
+            "symfony/dependency-injection": "~3.4|~4.1",
+            "symfony/var-dumper": "^4.1.1"
+        },
+        "time": "2019-10-30T12:58:49+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Cache\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Cache component with PSR-6, PSR-16, and tags",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "caching",
+            "psr6"
+        ]
+    },
+    {
+        "name": "symfony/cache-contracts",
+        "version": "v1.1.7",
+        "version_normalized": "1.1.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/cache-contracts.git",
+            "reference": "af50d14ada9e4e82cfabfabdc502d144f89be0a1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/af50d14ada9e4e82cfabfabdc502d144f89be0a1",
+            "reference": "af50d14ada9e4e82cfabfabdc502d144f89be0a1",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": "^7.1.3",
+            "psr/cache": "^1.0"
+        },
+        "suggest": {
+            "symfony/cache-implementation": ""
+        },
+        "time": "2019-10-04T21:43:27+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Contracts\\Cache\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Generic abstractions related to caching",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "abstractions",
+            "contracts",
+            "decoupling",
+            "interfaces",
+            "interoperability",
+            "standards"
+        ]
+    },
+    {
+        "name": "symfony/expression-language",
+        "version": "v4.3.6",
+        "version_normalized": "4.3.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/expression-language.git",
+            "reference": "d81f0eb914f534e8b17a9db8c2408d1f0cf55fd2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/expression-language/zipball/d81f0eb914f534e8b17a9db8c2408d1f0cf55fd2",
+            "reference": "d81f0eb914f534e8b17a9db8c2408d1f0cf55fd2",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": "^7.1.3",
+            "symfony/cache": "~3.4|~4.0",
+            "symfony/service-contracts": "^1.1"
+        },
+        "time": "2019-10-29T01:54:26+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\ExpressionLanguage\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony ExpressionLanguage Component",
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/http-foundation",
@@ -1928,6 +2746,140 @@
             "property",
             "property path",
             "reflection"
+        ]
+    },
+    {
+        "name": "symfony/service-contracts",
+        "version": "v1.1.7",
+        "version_normalized": "1.1.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/service-contracts.git",
+            "reference": "ffcde9615dc5bb4825b9f6aed07716f1f57faae0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/service-contracts/zipball/ffcde9615dc5bb4825b9f6aed07716f1f57faae0",
+            "reference": "ffcde9615dc5bb4825b9f6aed07716f1f57faae0",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": "^7.1.3",
+            "psr/container": "^1.0"
+        },
+        "suggest": {
+            "symfony/service-implementation": ""
+        },
+        "time": "2019-09-17T11:12:18+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Contracts\\Service\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Generic abstractions related to writing services",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "abstractions",
+            "contracts",
+            "decoupling",
+            "interfaces",
+            "interoperability",
+            "standards"
+        ]
+    },
+    {
+        "name": "symfony/var-exporter",
+        "version": "v4.3.6",
+        "version_normalized": "4.3.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/var-exporter.git",
+            "reference": "d5b4e2d334c1d80e42876c7d489896cfd37562f2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/var-exporter/zipball/d5b4e2d334c1d80e42876c7d489896cfd37562f2",
+            "reference": "d5b4e2d334c1d80e42876c7d489896cfd37562f2",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": "^7.1.3"
+        },
+        "require-dev": {
+            "symfony/var-dumper": "^4.1.1"
+        },
+        "time": "2019-08-22T07:33:08+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\VarExporter\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "A blend of var_export() + serialize() to turn any serializable data structure to plain PHP code",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "clone",
+            "construct",
+            "export",
+            "hydrate",
+            "instantiate",
+            "serialize"
         ]
     },
     {

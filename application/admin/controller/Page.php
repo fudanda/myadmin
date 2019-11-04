@@ -3,13 +3,22 @@
 namespace app\admin\controller;
 
 use think\Controller;
-use think\facade\Request;
+use Casbin\Enforcer;
+use CasbinAdapter\DBAL\Adapter as DatabaseAdapter;
+use Doctrine\DBAL\Configuration;
+use Doctrine\DBAL\DriverManager;
+use Casbin\Model\Model;
+use Kuiba\kuibaAdmin\Facade\Tool;
 
 class Page extends Controller
 {
+
    public function index()
    {
-      return view();
+      dump(Tool::getEnv('DATABASE.name'));
+      // $e = $this->getEnforcer();
+      // halt($e->enforce('eve', 'data3', 'read'));
+      // return view();
    }
    public function colorselect()
    {
