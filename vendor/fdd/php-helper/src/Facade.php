@@ -1,6 +1,6 @@
 <?php
 
-namespace Kuiba\kuibaAdmin\Facade;
+namespace Kuiba\kuibaAdmin;
 
 class Facade
 {

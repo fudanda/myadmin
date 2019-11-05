@@ -68,8 +68,6 @@ if (!function_exists('dirToArray')) {
         return $result;
     }
 }
-
-
 if (!function_exists('copy_dir')) {
     /**
      * 复制目录.

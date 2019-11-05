@@ -5,7 +5,7 @@ namespace Kuiba\kuibaAdmin\command;
 use think\console\Input;
 use think\console\input\Argument;
 use think\console\Output;
-use Kuiba\kuibaAdmin\facade\Tool;
+use Kuiba\kuibaAdmin\facade\Util;
 
 class Page extends \think\console\Command
 {
@@ -22,9 +22,9 @@ class Page extends \think\console\Command
     protected function execute(Input $input, Output $output)
     {
         $name = trim($input->getArgument('name'));
-        $className = Tool::getClassName($name, $this->type);
+        $className = Util::getClassName($name, $this->type);
         //控制器路径
-        $Path = Tool::getPathName($className);
+        $Path = Util::getPathName($className);
 
         // 创建controller
         if (is_file($Path)) {

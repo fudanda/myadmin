@@ -78,12 +78,14 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
         '6ab8ad87a734f276a6bcd5a0fe1289be' => __DIR__ . '/..' . '/markbaker/matrix/classes/src/operations/divideinto.php',
         'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
         '66453932bc1be9fb2f910a27947d11b6' => __DIR__ . '/..' . '/alibabacloud/client/src/Functions.php',
-        '372f2acb19e14cef735c8a158bc644cb' => __DIR__ . '/..' . '/fdd/php-helper/util/helper.php',
+        'f73cd72e824e08b4c32e03a808de2dd2' => __DIR__ . '/..' . '/fdd/php-helper/helper.php',
+        'ddc3cd2a04224f9638c5d0de6a69c7e3' => __DIR__ . '/..' . '/topthink/think-migration/src/config.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         't' => 
         array (
+            'think\\migration\\' => 16,
             'think\\composer\\' => 15,
         ),
         'c' => 
@@ -124,6 +126,7 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
             'PhpOffice\\PhpSpreadsheet\\' => 25,
+            'Phinx\\' => 6,
         ),
         'M' => 
         array (
@@ -132,6 +135,7 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
         ),
         'K' => 
         array (
+            'Kuiba\\util\\' => 11,
             'Kuiba\\kuibaAdmin\\' => 17,
             'Kuiba\\Youruoli\\' => 15,
             'Kuiba\\Youmingkuang\\' => 19,
@@ -189,6 +193,10 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
     );
 
     public static $prefixDirsPsr4 = array (
+        'think\\migration\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/topthink/think-migration/src',
+        ),
         'think\\composer\\' => 
         array (
             0 => __DIR__ . '/..' . '/topthink/think-installer/src',
@@ -289,6 +297,10 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
         array (
             0 => __DIR__ . '/..' . '/phpoffice/phpspreadsheet/src/PhpSpreadsheet',
         ),
+        'Phinx\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/topthink/think-migration/phinx/src/Phinx',
+        ),
         'MyCLabs\\Enum\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/php-enum/src',
@@ -296,6 +308,10 @@ class ComposerStaticInitaf5a35a9e1aa16855c5140ef44a816e0
         'Matrix\\' => 
         array (
             0 => __DIR__ . '/..' . '/markbaker/matrix/classes/src',
+        ),
+        'Kuiba\\util\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fdd/php-helper/util',
         ),
         'Kuiba\\kuibaAdmin\\' => 
         array (

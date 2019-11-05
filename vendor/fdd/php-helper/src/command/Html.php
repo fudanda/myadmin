@@ -5,7 +5,7 @@ namespace Kuiba\kuibaAdmin\command;
 use think\console\Input;
 use think\console\Output;
 use think\console\input\Argument;
-use Kuiba\kuibaAdmin\facade\Tool;
+use Kuiba\kuibaAdmin\facade\Util;
 use think\Console;
 
 class Html extends \think\console\Command
@@ -37,14 +37,14 @@ class Html extends \think\console\Command
     {
         $filePath = file_build_path(env('app_path'), '..', 'config', 'template.php');
         $baseFilePath = file_build_path(__DIR__, '..', '..', 'config', 'template.php');
-        Tool::handle($output, __FUNCTION__, $filePath, $baseFilePath, false);
+        Util::handle($output, __FUNCTION__, $filePath, $baseFilePath, false);
     }
     //复制数据库迁移文件
     public function createMigrate($output)
     {
         $filePath = file_build_path(env('app_path'), '..', 'database', 'migrations');
         $baseFilePath = file_build_path(__DIR__, '..', '..', 'database', 'migrations');
-        Tool::handle($output, __FUNCTION__, $filePath, $baseFilePath, true, 'copy_dir');
+        Util::handle($output, __FUNCTION__, $filePath, $baseFilePath, true, 'copy_dir');
     }
     //复制静态文件
     public function createResources($output, $moduleName = 'admin')
@@ -63,7 +63,7 @@ class Html extends \think\console\Command
 
         $filePath = file_build_path(env('app_path'), '..', 'public', 'static', $moduleName);
         $baseFilePath = file_build_path(__DIR__, '..', '..', 'resources', 'html');
-        Tool::handle($output, __FUNCTION__, $filePath, $baseFilePath, true, 'copy_dir');
+        Util::handle($output, __FUNCTION__, $filePath, $baseFilePath, true, 'copy_dir');
     }
     //复制html文件
     public function createHtml($output, $moduleName = 'admin')
@@ -91,7 +91,7 @@ class Html extends \think\console\Command
     {
         $filePath = file_build_path(env('app_path'), '..', 'application', 'common', 'model', 'Common.php');
         $baseFilePath = file_build_path(__DIR__, '..', '..', 'src', 'model', 'Common.php');
-        Tool::handle($output, __FUNCTION__, $filePath, $baseFilePath);
+        Util::handle($output, __FUNCTION__, $filePath, $baseFilePath);
     }
     // //复制公共Route文件
     // public function createRoute($output, $moduleName = 'admin')
@@ -99,7 +99,7 @@ class Html extends \think\console\Command
     //     $routeName = $moduleName . '.php';
     //     $filePath = file_build_path(env('app_path'), '..', 'route', $routeName);
     //     $baseFilePath = file_build_path(__DIR__, '..', '..', 'src', 'route', $routeName);
-    //     Tool::handle($output, __FUNCTION__, $filePath, $baseFilePath);
+    //     Util::handle($output, __FUNCTION__, $filePath, $baseFilePath);
     // }
     //复制公共静态文件文件
     public function createModule($output, $moduleName = 'admin')
@@ -107,7 +107,7 @@ class Html extends \think\console\Command
         //复制page文件
         $filePath = file_build_path(env('app_path'), '..', 'view', $moduleName, 'page');
         $baseFilePath = file_build_path(__DIR__, '..', '..', 'resources', 'html', 'page');
-        Tool::handle($output, 'createResources', $filePath, $baseFilePath, true, 'copy_dir');
+        Util::handle($output, 'createResources', $filePath, $baseFilePath, true, 'copy_dir');
 
 
 

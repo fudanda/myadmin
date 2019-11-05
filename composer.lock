@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1cbc530c1aec1fc07c684ecb738a3641",
+    "content-hash": "d8641b945733cc41f0627f1d2ba8c130",
     "packages": [
         {
             "name": "adbario/php-dot-notation",
@@ -807,16 +807,16 @@
         },
         {
             "name": "fdd/php-helper",
-            "version": "v0.37",
+            "version": "v0.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fudanda/phpHelper.git",
-                "reference": "f24e7cb46d9009370b239b9ac12b5bd7bec01f3e"
+                "reference": "18e305509e8ffb64ee690c5ec2a1db8f919b01f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fudanda/phpHelper/zipball/f24e7cb46d9009370b239b9ac12b5bd7bec01f3e",
-                "reference": "f24e7cb46d9009370b239b9ac12b5bd7bec01f3e",
+                "url": "https://api.github.com/repos/fudanda/phpHelper/zipball/18e305509e8ffb64ee690c5ec2a1db8f919b01f3",
+                "reference": "18e305509e8ffb64ee690c5ec2a1db8f919b01f3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -827,14 +827,17 @@
             },
             "require": {
                 "alibabacloud/client": "^1.5",
+                "casbin/casbin": "^2.1",
+                "casbin/dbal-adapter": "^1.1",
                 "endroid/qr-code": "^3.6",
-                "php": ">=7.0.0",
+                "php": ">=7.1.0",
                 "phpoffice/phpspreadsheet": "^1.9"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Kuiba\\kuibaAdmin\\": "src",
+                    "Kuiba\\util\\": "util",
                     "Kuiba\\Baguda\\": "util/Kuiba/Baguda",
                     "Kuiba\\Carlaxiaokeling\\": "util/Kuiba/Carlaxiaokeling",
                     "Kuiba\\Dacang\\": "util/Kuiba/Dacang",
@@ -849,7 +852,7 @@
                     "Kuiba\\Youruoli\\": "util/Kuiba/Youruoli"
                 },
                 "files": [
-                    "util/helper.php"
+                    "helper.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -863,7 +866,7 @@
                 }
             ],
             "description": "php-helper",
-            "time": "2019-10-31T03:01:20+00:00"
+            "time": "2019-11-05T06:09:24+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2094,16 +2097,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v4.3.5",
+            "version": "v4.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "76590ced16d4674780863471bae10452b79210a5"
+                "reference": "38f63e471cda9d37ac06e76d14c5ea2ec5887051"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/76590ced16d4674780863471bae10452b79210a5",
-                "reference": "76590ced16d4674780863471bae10452b79210a5",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/38f63e471cda9d37ac06e76d14c5ea2ec5887051",
+                "reference": "38f63e471cda9d37ac06e76d14c5ea2ec5887051",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2151,11 +2154,11 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-10-04T19:48:13+00:00"
+            "time": "2019-10-30T12:58:49+00:00"
         },
         {
             "name": "symfony/inflector",
-            "version": "v4.3.5",
+            "version": "v4.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/inflector.git",
@@ -2219,16 +2222,16 @@
         },
         {
             "name": "symfony/mime",
-            "version": "v4.3.5",
+            "version": "v4.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "32f71570547b91879fdbd9cf50317d556ae86916"
+                "reference": "3c0e197529da6e59b217615ba8ee7604df88b551"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/32f71570547b91879fdbd9cf50317d556ae86916",
-                "reference": "32f71570547b91879fdbd9cf50317d556ae86916",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/3c0e197529da6e59b217615ba8ee7604df88b551",
+                "reference": "3c0e197529da6e59b217615ba8ee7604df88b551",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2280,20 +2283,20 @@
                 "mime",
                 "mime-type"
             ],
-            "time": "2019-09-19T17:00:15+00:00"
+            "time": "2019-10-30T12:58:49+00:00"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v4.3.5",
+            "version": "v4.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "81c2e120522a42f623233968244baebd6b36cb6a"
+                "reference": "f46c7fc8e207bd8a2188f54f8738f232533765a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/81c2e120522a42f623233968244baebd6b36cb6a",
-                "reference": "81c2e120522a42f623233968244baebd6b36cb6a",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/f46c7fc8e207bd8a2188f54f8738f232533765a4",
+                "reference": "f46c7fc8e207bd8a2188f54f8738f232533765a4",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2340,7 +2343,7 @@
                 "configuration",
                 "options"
             ],
-            "time": "2019-08-08T09:29:19+00:00"
+            "time": "2019-10-28T20:59:01+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2602,7 +2605,7 @@
         },
         {
             "name": "symfony/property-access",
-            "version": "v4.3.5",
+            "version": "v4.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
@@ -2906,6 +2909,51 @@
                 }
             ],
             "time": "2018-05-11T06:45:42+00:00"
+        },
+        {
+            "name": "topthink/think-migration",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/think-migration.git",
+                "reference": "70c89850ca29c2eab988c7c3475d1d5331901bb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/top-think/think-migration/zipball/70c89850ca29c2eab988c7c3475d1d5331901bb8",
+                "reference": "70c89850ca29c2eab988c7c3475d1d5331901bb8",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "topthink/framework": "5.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phinx\\": "phinx/src/Phinx",
+                    "think\\migration\\": "src"
+                },
+                "files": [
+                    "src/config.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "yunwuxin",
+                    "email": "448901948@qq.com"
+                }
+            ],
+            "time": "2017-12-31T16:32:22+00:00"
         }
     ],
     "packages-dev": [],

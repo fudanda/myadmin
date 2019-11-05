@@ -77,5 +77,6 @@ return array(
     '6ab8ad87a734f276a6bcd5a0fe1289be' => $vendorDir . '/markbaker/matrix/classes/src/operations/divideinto.php',
     'b067bc7112e384b61c701452d53a14a8' => $vendorDir . '/mtdowling/jmespath.php/src/JmesPath.php',
     '66453932bc1be9fb2f910a27947d11b6' => $vendorDir . '/alibabacloud/client/src/Functions.php',
-    '372f2acb19e14cef735c8a158bc644cb' => $vendorDir . '/fdd/php-helper/util/helper.php',
+    'f73cd72e824e08b4c32e03a808de2dd2' => $vendorDir . '/fdd/php-helper/helper.php',
+    'ddc3cd2a04224f9638c5d0de6a69c7e3' => $vendorDir . '/topthink/think-migration/src/config.php',
 );

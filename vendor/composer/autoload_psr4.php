@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'think\\migration\\' => array($vendorDir . '/topthink/think-migration/src'),
     'think\\composer\\' => array($vendorDir . '/topthink/think-installer/src'),
     'clagiordano\\weblibs\\configmanager\\' => array($vendorDir . '/clagiordano/weblibs-configmanager/src'),
     'app\\' => array($baseDir . '/application'),
@@ -31,8 +32,10 @@ return array(
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Psr\\Cache\\' => array($vendorDir . '/psr/cache/src'),
     'PhpOffice\\PhpSpreadsheet\\' => array($vendorDir . '/phpoffice/phpspreadsheet/src/PhpSpreadsheet'),
+    'Phinx\\' => array($vendorDir . '/topthink/think-migration/phinx/src/Phinx'),
     'MyCLabs\\Enum\\' => array($vendorDir . '/myclabs/php-enum/src'),
     'Matrix\\' => array($vendorDir . '/markbaker/matrix/classes/src'),
+    'Kuiba\\util\\' => array($vendorDir . '/fdd/php-helper/util'),
     'Kuiba\\kuibaAdmin\\' => array($vendorDir . '/fdd/php-helper/src'),
     'Kuiba\\Youruoli\\' => array($vendorDir . '/fdd/php-helper/util/Kuiba/Youruoli'),
     'Kuiba\\Youmingkuang\\' => array($vendorDir . '/fdd/php-helper/util/Kuiba/Youmingkuang'),

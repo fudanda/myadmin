@@ -1,6 +1,9 @@
-## 使用 [返回](../README.md)
+# 使用 [返回](../README.md)
+
 `use Kuiba\Qihengsan\ExcelExportV2;`
+
 ## 导出
+
 ```php
     $list   = [
         [
@@ -28,7 +31,9 @@
     //压缩导出
     return ExcelExportV2::exportZip($list, $header, $fileName,$suffix,$limit);
 ```
+
 ## 导入
+
 ```php
     $filePath   = './static/excel/1.xlsx'; //文件路径
     $startIndex = 1;                       //开始行数 默认 1
